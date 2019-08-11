@@ -1,0 +1,10 @@
+<h1>home page</h1>
+
+<a href="{% url 'create' %}"><button>create</button></a>
+
+<br>
+<br>
+
+{% for person in object_list %}
+  <div>{{ person.name}} {{ person.age }} <a href="{% url 'update' person.id %}"><button>update</button></a> <a href="{% url 'delete' person.id %}"><button>delete</button></a></div>
+{% endfor %}
